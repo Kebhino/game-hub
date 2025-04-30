@@ -1,0 +1,29 @@
+[33mcommit 51a7343d8062305c518615dedac4dc3b93d351fe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: KeBe <biuro@instaglass.pl>
+Commit: KeBe <biuro@instaglass.pl>
+
+    adding colormode
+
+[33mcommit 064b9dadd056350126392c942b8fb591db710a06[m
+Author: KeBe <biuro@instaglass.pl>
+Commit: KeBe <biuro@instaglass.pl>
+
+    Build a navbar
+
+[33mcommit 7c1fe69b6059c7f974ebf68b0311168f70c9b979[m
+Author: KeBe <biuro@instaglass.pl>
+Commit: KeBe <biuro@instaglass.pl>
+
+    display property
+
+[33mcommit a19768eb1115751610c144bc3ba8e718d807f290[m
+Author: KeBe <biuro@instaglass.pl>
+Commit: KeBe <biuro@instaglass.pl>
+
+    Install Chakra UI
+
+[33mcommit 6a754dd90b1c84fccf27bc028b1467cda2c3a02d[m
+Author: KeBe <biuro@instaglass.pl>
+Commit: KeBe <biuro@instaglass.pl>
+
+    Initial Commit
