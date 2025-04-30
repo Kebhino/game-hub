@@ -1,15 +1,23 @@
-import { Button, HStack } from "@chakra-ui/react";
+import { Button, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 
 const App = () => {
   return (
-    <HStack>
-      <Button size="xl" colorPalette="blue">
-        Click me
-      </Button>
-      <Button colorPalette="pink" variant="outline">
-        Click me
-      </Button>
-    </HStack>
+    <Grid
+      templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
+    >
+      <GridItem area="nav" bg="coral">
+        Nav
+      </GridItem>
+
+      <GridItem area="aside" bg="gold" display={{ base: "none", lg: "block" }}>
+        Aside
+      </GridItem>
+
+      <GridItem area="main" bg="dodgerblue">
+        Main
+      </GridItem>
+    </Grid>
   );
 };
 
