@@ -1,3 +1,4 @@
+import CriticScore from "@/componentsGame/CriticScore";
 import apiClients from "@/services/api-clients";
 import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
@@ -13,6 +14,7 @@ export interface Game {
   name: string;
   background_image: string
   parent_platforms: {platform: Platform}[]
+  metacritic: number
 }
 
 interface FetchGamesResponse {
