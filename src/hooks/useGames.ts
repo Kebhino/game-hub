@@ -1,4 +1,3 @@
-import CriticScore from "@/componentsGame/CriticScore";
 import apiClients from "@/services/api-clients";
 import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
