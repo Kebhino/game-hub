@@ -1,6 +1,6 @@
 import { Game } from "@/hooks/useGames";
 
-import { CardRoot, Image } from "@chakra-ui/react";
+import { CardHeader, CardRoot, Image } from "@chakra-ui/react";
 import { Card } from "@chakra-ui/react";
 import React from "react";
 
@@ -10,9 +10,11 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <CardRoot>
+    <CardRoot borderRadius={10} size="md" overflow="hidden">
       <Image src={game.background_image}></Image>
-      <Card.Header>{game.name}</Card.Header>
+      <Card.Body>
+        <CardHeader fontSize="lg">{game.name}</CardHeader>
+      </Card.Body>
     </CardRoot>
   );
 };
