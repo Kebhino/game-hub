@@ -1,7 +1,8 @@
-import { List, ListItem } from "@chakra-ui/react";
+import { List, ListItem, SimpleGrid } from "@chakra-ui/react";
 import { LuCircleCheck } from "react-icons/lu";
 import { Text } from "@chakra-ui/react";
 import useGames from "@/hooks/useGames";
+import GameCard from "./GameCard";
 
 const GameGrid = () => {
   const { games, error } = useGames();
@@ -9,16 +10,11 @@ const GameGrid = () => {
   return (
     <>
       {error && <Text>{error}</Text>}
-      <List.Root gap="2" variant="plain" align="center">
+      <SimpleGrid columns={3}>
         {games.map((game) => (
-          <List.Item key={game.id}>
-            <List.Indicator asChild color="green.500">
-              <LuCircleCheck />
-            </List.Indicator>
-            {game.name}
-          </List.Item>
+          <GameCard key={game.id} game={game} />
         ))}
-      </List.Root>
+      </SimpleGrid>
     </>
   );
 };
