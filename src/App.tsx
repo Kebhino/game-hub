@@ -5,6 +5,8 @@ import GameGrid from "./componentsGame/GameGrid";
 import GenreList from "./componentsGame/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./componentsGame/PlatformSelector";
+import { Box } from "@chakra-ui/react";
 
 const App = () => {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
@@ -29,6 +31,9 @@ const App = () => {
       </GridItem>
 
       <GridItem area="main">
+        <Box paddingX={10} marginBottom={4}>
+          <PlatformSelector />
+        </Box>
         <GameGrid selectedGenre={selectedGenre} />
       </GridItem>
     </Grid>
