@@ -1,4 +1,4 @@
-import { List, ListItem, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import { LuCircleCheck } from "react-icons/lu";
 import { Text } from "@chakra-ui/react";
 import useGames from "@/hooks/useGames";
@@ -12,12 +12,7 @@ const GameGrid = () => {
   return (
     <>
       {error && <Text>{error}</Text>}
-      <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
-        padding={10}
-        columnGap={10}
-        rowGap={10}
-      >
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 5 }} padding={10} gap={3}>
         {isLoading &&
           skeletons.map((skeleton) => (
             <GameCardContainer>
