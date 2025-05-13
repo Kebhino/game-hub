@@ -12,10 +12,10 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
     { value: "", label: "Relevance" },
     { value: "-added", label: "Date added" },
     { value: "name", label: "Name" },
-    { value: "-relase", label: "Relased date" },
+    { value: "-released", label: "Released date" },
     { value: "-metacritic", label: "Popularity" },
     { value: "-rating", label: "Relevance" },
-    { value: "", label: "Average rating" },
+    { value: "average", label: "Average rating" },
   ];
 
   const currentSortOrder = sortOrders.find(
