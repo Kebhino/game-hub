@@ -18,9 +18,7 @@ interface Props {
 }
 
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
-  const { data, isLoading, error } = useGenres();
-  if (error) return null;
-  if (isLoading) return <Spinner />;
+  const { data } = useGenres();
 
   return (
     <>
@@ -35,7 +33,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                 boxSize="32px"
                 borderRadius={8}
                 objectFit={"cover"}
-                src={getCroppedImageUrl(genre.image_background)}
+                src={getCroppedImageUrl(genre.background_image)}
               />
               <Button
                 w={"100%"}
