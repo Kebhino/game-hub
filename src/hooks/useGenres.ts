@@ -3,7 +3,7 @@ import genres from '../data/genres'
 export interface Genre { 
     id: number; 
     name: string; 
-    background_image: string;
+    image_background: string;
 }
 
 

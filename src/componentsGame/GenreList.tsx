@@ -18,12 +18,14 @@ interface Props {
 }
 
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
-  const { data } = useGenres();
+  const { data, isLoading, error } = useGenres();
+  if (error) return null;
+  if (isLoading) return <Spinner />;
 
   return (
     <>
       <Heading fontSize={"xl"} marginBottom={3}>
-        Kategorie Gier
+        Genres
       </Heading>
       <List.Root>
         {data.map((genre) => (
@@ -33,7 +35,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                 boxSize="32px"
                 borderRadius={8}
                 objectFit={"cover"}
-                src={getCroppedImageUrl(genre.background_image)}
+                src={getCroppedImageUrl(genre.image_background)}
               />
               <Button
                 w={"100%"}

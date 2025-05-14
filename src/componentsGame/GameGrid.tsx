@@ -1,11 +1,9 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import { LuCircleCheck } from "react-icons/lu";
 import { Text } from "@chakra-ui/react";
 import useGames, { Platform } from "@/hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleon from "./GameCardSkeleon";
 import GameCardContainer from "./GameCardContainer";
-import { Genre } from "@/hooks/useGenres";
 import { GameQuery } from "@/App";
 
 interface Props {
