@@ -16,11 +16,7 @@ Repo: [github.com/Kebhino/game-hub](https://github.com/Kebhino/game-hub)
 - 💾 Game covers, release dates, platform icons and metascore info
 - 🧱 Clean, scalable folder structure
 
-## 📸 Screenshots
 
-> You can add screenshots here using markdown:
->  
-> `![screenshot](./public/screenshot.png)`
 
 ## 🚀 Tech Stack
 
@@ -67,19 +63,18 @@ npm run build
 
 ```
 src/
-├── components/         # Reusable UI components
+├── componentsGame/     # Reusable UI components
 ├── hooks/              # Custom React hooks (e.g. useGames, useGenres)
 ├── services/           # API logic
-├── pages/              # Main page layout
-├── theme/              # Chakra theme config
+├── data/               # Static Data
+
 ```
 
 ## 📌 Future Improvements
 
 - Add pagination or infinite scroll
-- Implement dark mode toggle
 - Add detailed game pages
-- Search input for game titles
+
 
 ## 🧑‍💻 Author
 
