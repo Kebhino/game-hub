@@ -5,6 +5,7 @@ import GameCard from "./GameCard";
 import GameCardSkeleon from "./GameCardSkeleon";
 import GameCardContainer from "./GameCardContainer";
 import { GameQuery } from "@/App";
+import { useEffect } from "react";
 
 interface Props {
   gameQuery: GameQuery;
@@ -14,7 +15,10 @@ interface Props {
 const GameGrid = ({ gameQuery, funkcjaDoUstawianiaIlosciGier }: Props) => {
   const { data, error, isLoading, iloscGier } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-  funkcjaDoUstawianiaIlosciGier(iloscGier);
+
+  useEffect(() => {
+    funkcjaDoUstawianiaIlosciGier(iloscGier);
+  }, [iloscGier, funkcjaDoUstawianiaIlosciGier]);
 
   if (error) return <Text>{error}</Text>;
   return (
