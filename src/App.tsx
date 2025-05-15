@@ -19,6 +19,7 @@ export interface GameQuery {
 
 const App = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  const [numberOfGames, setNumberOfGames] = useState(0);
 
   return (
     <Grid
@@ -43,7 +44,7 @@ const App = () => {
       </GridItem>
 
       <GridItem area="main">
-        <GameHeading gameQuery={gameQuery} />
+        <GameHeading gameQuery={gameQuery} iloscGier={numberOfGames} />
         <HStack gap={5} paddingLeft={10}>
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
@@ -59,7 +60,10 @@ const App = () => {
           />
         </HStack>
 
-        <GameGrid gameQuery={gameQuery} />
+        <GameGrid
+          gameQuery={gameQuery}
+          funkcjaDoUstawianiaIlosciGier={setNumberOfGames}
+        />
       </GridItem>
     </Grid>
   );

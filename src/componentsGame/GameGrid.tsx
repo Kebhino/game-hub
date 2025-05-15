@@ -8,11 +8,13 @@ import { GameQuery } from "@/App";
 
 interface Props {
   gameQuery: GameQuery;
+  funkcjaDoUstawianiaIlosciGier: (count: number) => void;
 }
 
-const GameGrid = ({ gameQuery }: Props) => {
-  const { data, error, isLoading } = useGames(gameQuery);
+const GameGrid = ({ gameQuery, funkcjaDoUstawianiaIlosciGier }: Props) => {
+  const { data, error, isLoading, iloscGier } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  funkcjaDoUstawianiaIlosciGier(iloscGier);
 
   if (error) return <Text>{error}</Text>;
   return (

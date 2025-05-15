@@ -13,15 +13,18 @@ const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?:
     const [data, setData] = useState<T[]>([]);
       const [error, setError] = useState("");
       const [isLoading, setLoading] = useState(false)
+      const [iloscGier, setIloscGier ] = useState(0)
     
       useEffect(() => {
 const controller = new AbortController();
 
         setLoading(true)
+        setIloscGier(0)
         apiClients
           .get<FetchResponse<T>>(endpoint, {signal: controller.signal, ...requestConfig})
           .then((res) => {setData(res.data.results);
-            setLoading(false)
+            setLoading(false);
+            setIloscGier(res.data.count)
           })
           .catch((err) => {
             if (err instanceof CanceledError) return;
@@ -32,6 +35,6 @@ const controller = new AbortController();
           return () => controller.abort()
       }, deps ? [...deps] : []);
 
-      return {data, error, isLoading}; }
+      return {data, error, isLoading, iloscGier}; }
 
 export default useData
