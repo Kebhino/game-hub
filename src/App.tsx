@@ -6,7 +6,7 @@ import GenreList from "./componentsGame/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./componentsGame/PlatformSelector";
-import { Platform } from "./hooks/useGames";
+import { Platform } from "./hooks/usePlatforms";
 import SortSelector from "./componentsGame/SortSelector";
 import GameHeading from "./componentsGame/GameHeading";
 

@@ -1,9 +1,8 @@
-import usePlatforms from "@/hooks/usePlatforms";
+import usePlatforms, { Platform } from "@/hooks/usePlatforms";
 import { HStack, Menu } from "@chakra-ui/react";
 import { Button, Text } from "@chakra-ui/react";
 import { Portal } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
-import { Platform } from "@/hooks/useGames";
 
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
